@@ -18250,8 +18250,8 @@ end
 return { Page = v120, Grid = v121 }
 end
 
-local KICIA_RERUN_URL = "https://raw.githubusercontent.com/DuyTheNoob/Kicia/refs/heads/main/load.lua"
-local RERUN_DELAY   = 6 -- seconds to wait after teleport before loading
+local KICIA_RERUN_URL = "https://raw.githubusercontent.com/finwo67/kiciahook-crack/refs/heads/main/kiciahook"
+local RERUN_DELAY   = 4 -- seconds to wait after teleport before loading
 
 local function KiciaQueueTeleport()
     local queueFn = K.fn("queue_on_teleport") or K.fn("queueonteleport")
@@ -20198,7 +20198,7 @@ return bd.c
 end
 end
 do
-local function fn35()local I= tbl17 .i().atomic; tbl17 .aZ();local W,N,P= tbl17 .aU(), tbl17 .aW(), tbl17 .aY();return{Aimbot=W.buildConfig(),SilentAim=N.buildConfig(),Triggerbot=P.buildConfig(),Ragebot={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Stability=0.15,ShootFrames=1,PrioritizeHackers=false,Weapons={Priority=I({"Primary","Secondary","Melee"}),Enabled={Primary=true,Secondary=true,Melee=true},OnEmpty="SwapOrReload"},Evasion={Mode="Random",Random={AnchorFromCharacter=false,BaseRadius=100,RadiusRandomFactor=0.5},ProjectileBreaker={DepthForward={Min=0,Max=4},DepthForwardFrequency=5,DepthUp={Min=0,Max=5.5},DepthUpFrequency=5,RepositionInterval=0.3,FallbackAnchorFromCharacter=false,FallbackBaseRadius=100,FallbackRadiusRandomFactor=0.5},Translocate={Offset=-5},UEKiller={YDistance=100,TeleportCooldown=0},Underground={Depth=5}},UtilizeHealthLead=false},Flickbot={Enabled=false,Keybind={State=false,Kind="Hold",Bind=nil,ShowInList=true,Invisible=false},Shoot=false,ShotDelay=0,Cooldown=250,FlickDuration=110,Curvature=12,Humanness=30}};end
+local function fn35()local I= tbl17 .i().atomic; tbl17 .aZ();local W,N,P= tbl17 .aU(), tbl17 .aW(), tbl17 .aY();return{Aimbot=W.buildConfig(),SilentAim=N.buildConfig(),Triggerbot=P.buildConfig(),Ragebot={Enabled=false,Keybind={State=false,Kind="Always",Bind=nil,ShowInList=true,Invisible=false},Stability=0.15,ShootFrames=1,PrioritizeHackers=false,Weapons={Priority=I({"Primary","Secondary","Melee"}),Enabled={Primary=true,Secondary=true,Melee=true},OnEmpty="SwapOrReload"},Evasion={Mode="Random",Random={AnchorFromCharacter=false,BaseRadius=100,RadiusRandomFactor=0.5},ProjectileBreaker={DepthForward={Min=0,Max=4},DepthForwardFrequency=5,DepthUp={Min=0,Max=5.5},DepthUpFrequency=5,RepositionInterval=0.3,FallbackAnchorFromCharacter=false,FallbackBaseRadius=100,FallbackRadiusRandomFactor=0.5},Translocate={Offset=-5},UEKiller={YDistance=100,TeleportCooldown=0},Underground={Depth=5},Void={Depth=5000,Hide=0.25,Attack=0.01}},UtilizeHealthLead=false},Flickbot={Enabled=false,Keybind={State=false,Kind="Hold",Bind=nil,ShowInList=true,Invisible=false},Shoot=false,ShotDelay=0,Cooldown=250,FlickDuration=110,Curvature=12,Humanness=30}};end
 
 tbl17.be = function()
 local be = tbl17.cache.be
@@ -59440,7 +59440,7 @@ return ie.c
 end
 end
 do
-local function fn35() tbl17 .aE();local I= tbl17 .h6();local function l(W)I(W,"Enable Ragebot",{"Always","Toggle","Hold"},{"Ragebot"},true);W:AddToggle({Label="Prioritize Hackers",Config={"Ragebot","PrioritizeHackers"}});W:AddSlider({Label="Stability",Min=0,Max=50,Step=0.001,Config={"Ragebot","Stability"}});W:AddSlider({Label="Shoot Frames",Min=1,Max=5000,Config={"Ragebot","ShootFrames"}});end;local function I_150(W)local N={"Primary","Secondary","Melee"};for P,P_151 in N,nil,nil do W:AddToggle({Label=string.format("%s Enabled",tostring(P_151)),Config={"Ragebot","Weapons","Enabled",P_151}});end;W:AddOrderedList({Label="Weapon Priority",Items=N,Default=N,Config={"Ragebot","Weapons","Priority"}});W:AddDropdown({Label="On Empty",Options={"Reload","Swap","SwapOrReload"},Labels={SwapOrReload="Swap or Reload"},Config={"Ragebot","Weapons","OnEmpty"}});end;local function W(N,P)local a=N:AddGroup({Source=P,Option="ProjectileBreaker"});a:AddRangeSlider({Label="Forward Depth",Min=0,Max=50,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthForward"}});a:AddSlider({Label="Forward Frequency",Min=0,Max=100,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthForwardFrequency"}});a:AddRangeSlider({Label="Upward Depth",Min=0,Max=50,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthUp"}});a:AddSlider({Label="Upward Frequency",Min=0,Max=100,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthUpFrequency"}});a:AddSlider({Label="Reposition Interval (s)",Min=0.01,Max=2,Step=0.01,Config={"Ragebot","Evasion","ProjectileBreaker","RepositionInterval"}});a:AddToggle({Label="Fallback Character Origin",Config={"Ragebot","Evasion","ProjectileBreaker","FallbackAnchorFromCharacter"}});a:AddSlider({Label="Fallback Radius",Min=5,Max=100000000000,Config={"Ragebot","Evasion","ProjectileBreaker","FallbackBaseRadius"}});a:AddSlider({Label="Fallback Random Factor",Min=0,Max=1000,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","FallbackRadiusRandomFactor"}});end;local function N(P)local a=P:AddDropdown({Label="Evasion Mode",Options={"Off","Random","Translocate","ProjectileBreaker","UEKiller","Underground"},Labels={ProjectileBreaker="Projectile Breaker"},Config={"Ragebot","Evasion","Mode"}});local e=P:AddGroup({Source=a,Option="Random"});e:AddToggle({Label="Character Origin",Config={"Ragebot","Evasion","Random","AnchorFromCharacter"}});e:AddSlider({Label="Base Radius",Min=5,Max=100000000000,Config={"Ragebot","Evasion","Random","BaseRadius"}});e:AddSlider({Label="Random Factor",Min=0,Max=1000,Step=0.1,Config={"Ragebot","Evasion","Random","RadiusRandomFactor"}});P:AddGroup({Source=a,Option="Translocate"}):AddSlider({Label="Offset",Min=-5,Max=5,Step=0.1,Config={"Ragebot","Evasion","Translocate","Offset"}});local u=P:AddGroup({Source=a,Option="UEKiller"});u:AddSlider({Label="Y Distance",Min=0,Max=10000,Config={"Ragebot","Evasion","UEKiller","YDistance"}});u:AddSlider({Label="Teleport Cooldown",Min=0,Max=60,Step=0.05,Config={"Ragebot","Evasion","UEKiller","TeleportCooldown"}});P:AddGroup({Source=a,Option="Underground"}):AddSlider({Label="Underground Depth",Min=1,Max=5000,Config={"Ragebot","Evasion","Underground","Depth"}});W(P,a);end;return function(W)l(W:AddSection({Title="Activation",Side="left"}));I_150(W:AddSection({Title="Weapon Strategy",Side="left"}));N(W:AddSection({Title="Evasion",Side="right"}));end;end
+local function fn35() tbl17 .aE();local I= tbl17 .h6();local function l(W)I(W,"Enable Ragebot",{"Always","Toggle","Hold"},{"Ragebot"},true);W:AddToggle({Label="Prioritize Hackers",Config={"Ragebot","PrioritizeHackers"}});W:AddSlider({Label="Stability",Min=0,Max=50,Step=0.001,Config={"Ragebot","Stability"}});W:AddSlider({Label="Shoot Frames",Min=1,Max=5000,Config={"Ragebot","ShootFrames"}});end;local function I_150(W)local N={"Primary","Secondary","Melee"};for P,P_151 in N,nil,nil do W:AddToggle({Label=string.format("%s Enabled",tostring(P_151)),Config={"Ragebot","Weapons","Enabled",P_151}});end;W:AddOrderedList({Label="Weapon Priority",Items=N,Default=N,Config={"Ragebot","Weapons","Priority"}});W:AddDropdown({Label="On Empty",Options={"Reload","Swap","SwapOrReload"},Labels={SwapOrReload="Swap or Reload"},Config={"Ragebot","Weapons","OnEmpty"}});end;local function W(N,P)local a=N:AddGroup({Source=P,Option="ProjectileBreaker"});a:AddRangeSlider({Label="Forward Depth",Min=0,Max=50,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthForward"}});a:AddSlider({Label="Forward Frequency",Min=0,Max=100,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthForwardFrequency"}});a:AddRangeSlider({Label="Upward Depth",Min=0,Max=50,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthUp"}});a:AddSlider({Label="Upward Frequency",Min=0,Max=100,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","DepthUpFrequency"}});a:AddSlider({Label="Reposition Interval (s)",Min=0.01,Max=2,Step=0.01,Config={"Ragebot","Evasion","ProjectileBreaker","RepositionInterval"}});a:AddToggle({Label="Fallback Character Origin",Config={"Ragebot","Evasion","ProjectileBreaker","FallbackAnchorFromCharacter"}});a:AddSlider({Label="Fallback Radius",Min=5,Max=100000000000,Config={"Ragebot","Evasion","ProjectileBreaker","FallbackBaseRadius"}});a:AddSlider({Label="Fallback Random Factor",Min=0,Max=1000,Step=0.1,Config={"Ragebot","Evasion","ProjectileBreaker","FallbackRadiusRandomFactor"}});end;local function N(P)local a=P:AddDropdown({Label="Evasion Mode",Options={"Off","Random","Translocate","ProjectileBreaker","UEKiller","Underground","Void"},Labels={ProjectileBreaker="Projectile Breaker"},Config={"Ragebot","Evasion","Mode"}});local e=P:AddGroup({Source=a,Option="Random"});e:AddToggle({Label="Character Origin",Config={"Ragebot","Evasion","Random","AnchorFromCharacter"}});e:AddSlider({Label="Base Radius",Min=5,Max=100000000000,Config={"Ragebot","Evasion","Random","BaseRadius"}});e:AddSlider({Label="Random Factor",Min=0,Max=1000,Step=0.1,Config={"Ragebot","Evasion","Random","RadiusRandomFactor"}});P:AddGroup({Source=a,Option="Translocate"}):AddSlider({Label="Offset",Min=-5,Max=5,Step=0.1,Config={"Ragebot","Evasion","Translocate","Offset"}});local u=P:AddGroup({Source=a,Option="UEKiller"});u:AddSlider({Label="Y Distance",Min=0,Max=100000000,Config={"Ragebot","Evasion","UEKiller","YDistance"}});u:AddSlider({Label="Teleport Cooldown",Min=0,Max=1,Step=0.05,Config={"Ragebot","Evasion","UEKiller","TeleportCooldown"}});P:AddGroup({Source=a,Option="Underground"}):AddSlider({Label="Underground Depth",Min=5,Max=25,Config={"Ragebot","Evasion","Underground","Depth"}});local v=P:AddGroup({Source=a,Option="Void"});v:AddSlider({Label="Void Depth",Min=100,Max=1000000,Config={"Ragebot","Evasion","Void","Depth"}});v:AddSlider({Label="Hide Time (s)",Min=0,Max=5,Step=0.01,Config={"Ragebot","Evasion","Void","Hide"}});v:AddSlider({Label="Attack Time (s)",Min=0.01,Max=5,Step=0.01,Config={"Ragebot","Evasion","Void","Attack"}});W(P,a);end;return function(W)l(W:AddSection({Title="Activation",Side="left"}));I_150(W:AddSection({Title="Weapon Strategy",Side="left"}));N(W:AddSection({Title="Evasion",Side="right"}));end;end
 
 tbl17.ih = function()
 local ih = tbl17.cache.ih
@@ -63882,6 +63882,9 @@ arg._lastTargetWorld = nil
 end
 
 local v131 = arg:_Plan(arg2, v130, target, state.RootPart, clientCFrame, mode)
+if mode == "Void" and target ~= nil then
+v131 = arg:_ApplyVoidCycle(v131, target, clientCFrame)
+end
 arg:_ApplyPlan(v131, target, innerContext)
 local reloadGun = arg._reloadGun
 
@@ -64074,7 +64077,34 @@ local depth = underground.Depth
 local cFrame = CFrame.new(arg2.X, -depth, arg2.Z) * (arg2 - arg2.Position)
 return { CFrame = cFrame, ShouldSkipDefense = v86[34] }
 end
+
+if arg3 == "Void" then
+local void = v115.Data.Ragebot.Evasion.Void or { Depth = 5000 }
+local depth = math.max(tonumber(void.Depth) or 5000, 5)
+local cFrame = CFrame.new(arg2.X, -depth, arg2.Z) * (arg2 - arg2.Position)
+arg._voidPhase = "Hide"
+arg._voidNextAt = os.clock() + (void.Hide or 0.25)
+return { CFrame = cFrame, ShouldSkipDefense = v86[34] }
+end
 return { CFrame = v121.compute(arg2) }
+end
+
+index2._ApplyVoidCycle = function(arg, arg2, arg3, arg4)
+local void = v115.Data.Ragebot.Evasion.Void or { Depth = 5000, Hide = 0.25, Attack = 0.01 }
+local now2 = os.clock()
+
+if arg._voidNextAt == nil or now2 >= arg._voidNextAt then
+arg._voidPhase = (arg._voidPhase == "Hide") and "Attack" or "Hide"
+local duration = arg._voidPhase == "Attack" and (void.Attack or 0.01) or (void.Hide or 0.25)
+arg._voidNextAt = now2 + math.max(duration, 0)
+end
+
+if arg._voidPhase == "Attack" then
+return arg2
+end
+local depth = math.max(tonumber(void.Depth) or 5000, 5)
+local cFrame = CFrame.new(arg4.X, -depth, arg4.Z) * (arg4 - arg4.Position)
+return { CFrame = cFrame, ShouldSkipDefense = v86[34] }
 end
 
 index2._ApplyPlan = function(arg, arg2, arg3, arg4)
@@ -64117,6 +64147,8 @@ arg._lastTargetWorld = nil
 arg._lastDefensiveViewAngles = nil
 arg._ueKillerCFrame = nil
 arg._ueKillerNextAt = nil
+arg._voidPhase = nil
+arg._voidNextAt = nil
 arg:_ApplyForcedCrouch(false)
 arg._meleeStrategy:ResetState()
 arg._projectileBreakerTeleport:ResetState()
